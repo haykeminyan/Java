@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
-public class Program {
+public class SimpleMethods {
     public static void main(String[] args) {
         int[] mass_range = range(1, 162);
         System.out.println("List range is: " + Arrays.toString(mass_range));

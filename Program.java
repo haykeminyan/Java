@@ -3,24 +3,27 @@ import java.util.Random;
 
 public class Program {
     public static void main(String[] args) {
-        int[] mass_range = nums(0, 122);
+        int[] mass_range = range(1, 162);
         System.out.println("List range is: " + Arrays.toString(mass_range));
         int[] mass_shuffle = shuffle_array(mass_range);
         System.out.println("Shuffle array is: " + Arrays.toString(mass_shuffle));
         int[] result = bubble_sort(mass_shuffle);
         System.out.println("Bubble sort: " + Arrays.toString(result));
-        int low_elem_linear_search = result[0];
-        int high_elem_linear_search = result[result.length - 1];
+        int low_elem_linear_search = 0;
+        int high_elem_linear_search = result.length - 1;
+        System.out.println("The low element of array is: " + low_elem_linear_search);
+        System.out.println("The highest element of array is: " + high_elem_linear_search);
         System.out.println(
-                "Linear search answer: " + linear_search(result, 12, low_elem_linear_search, high_elem_linear_search));
+                "Linear search answer: " + linear_search(result, 10, low_elem_linear_search, high_elem_linear_search));
     }
 
-    static int[] nums(int low, int high) {
-        int[] res = new int[high - low];
-        for (int i = 0; i < high - low; i++) {
-            res[i] = i;
+    static int[] range(int low, int high) {
+        int[] a = new int[high - low];
+        for (int i = 0, j = low; i < high - low; i++, j++) {
+            a[i] = j;
         }
-        return res;
+        return a;
+
     }
 
     static int[] shuffle_array(int[] a) {
@@ -51,6 +54,7 @@ public class Program {
         int index = -1;
         while (low_elem_linear_search <= high_elem_linear_search) {
             int mid = (low_elem_linear_search + high_elem_linear_search) / 2;
+            System.out.println("Current elem searching: " + a[mid]);
             if (a[mid] == key) {
                 index = mid;
                 break;

@@ -1,15 +1,17 @@
-class Soft {
-    public static void main(String[] args) {
-        System.out.println(Palindrom_checker("BoooB"));
-    }
+import java.lang.*;
 
-    static boolean Palindrom_checker(String s) {
-        int n = s.length();
-        for (int i = 0; i < n / 2; i++) {
-            if (s.charAt(i) != s.charAt(n - 1 - i)) {
-                return false;
-            }
-        }
-        return true;
-    }
-}
+class Palindrom_checker {
+	public static void main(String[] args){
+		System.out.println(isPalindrome("alla"));
+		}
+		public static boolean isPalindrome(String text) {
+			String current_text = text.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+			StringBuilder m = new StringBuilder();
+			m.append(current_text);
+			if(current_text.equals(m.reverse().toString())){
+				return true;
+			}
+			return false;
+			
+		}
+	}

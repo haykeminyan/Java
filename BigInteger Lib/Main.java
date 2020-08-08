@@ -1,25 +1,25 @@
 import java.math.BigInteger;
+final String[] args) {
+        final Block obl = new Block(1, 2, 3);
+        final Block ob2 = new Block(5, 4, 3);
+        System.out.println(ob1.sameBlock(ob2));
+    }
+}
 
-class Main {
-    public static void main(String[] args) {
-        System.out.println(factorial(31312);
-        System.out.println(power(123992));
-        System.out.println(multiply());
+class Block {
+    int a, b, c;
+    int volume;
+
+    Block(final int i, final int j, final int k) {
+        this.a = i;
+        this.b = j;
+        this.c = k;
+        volume = a * b * c;
     }
-    public static BigInteger factorial(int value) {
-	BigInteger factor = BigInteger.valueOf(1);
-        for (int i = 1; i <= value; i++) {
-	    factor = factor.multiply(BigInteger.valueOf(i));
-        }
-	return factor;
-    }
-    public static BigInteger power(int exp) {
-	BigInteger b1 = new BigInteger("12321000");
-	BigInteger res = b1.pow(exp);
-	return res;
+    boolean sameBlock(final 
     }
     public static BigInteger multiply() {
-	BigInteger one = new BigInteger("231243143214233123415");
+	final BigInteger one = new BigInteger("231243143214233123415");
 	BigInteger two = new BigInteger("3434315425352154314232");
 	return one.multiply(two);
     }
